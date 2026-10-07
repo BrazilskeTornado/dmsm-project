@@ -4,7 +4,7 @@ declare(strict_types=1);
 session_start();
 
 const APP_NAME = 'AuraPerform';
-const ADMIN_EMAIL = 'davidsvaricek@seznam.cz';
+const ADMIN_EMAIL = 'your-store-email@example.com';
 const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
 const CLARITY_PROJECT_ID = 'xxxxxxxxxx';
 

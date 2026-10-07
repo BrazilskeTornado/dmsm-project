@@ -368,6 +368,7 @@ h2 {
     border: 1px solid var(--line);
     border-radius: 28px;
     margin-bottom: 80px;
+    margin-top: 64px;
     max-width: calc(var(--container) - 56px);
     text-align: center;
 }
@@ -441,7 +442,7 @@ h2 {
 }
 
 .flavor-card .button {
-    margin-top: auto;
+    margin-top: 30px;
 }
 
 .flavor-card input,
@@ -589,14 +590,49 @@ h2 {
     color: var(--lime);
 }
 
-.link-button,
-.back-link {
-    background: none;
-    border: 0;
-    color: var(--blue);
+.link-button {
+    background: rgba(255, 141, 137, .08);
+    border: 1px solid rgba(255, 141, 137, .25);
+    border-radius: 8px;
+    color: var(--danger);
     cursor: pointer;
     font: inherit;
-    text-decoration: underline;
+    font-size: .82rem;
+    font-weight: 700;
+    padding: 8px 11px;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+    background: rgba(255, 141, 137, .16);
+    border-color: rgba(255, 141, 137, .55);
+    color: #ffb3ae;
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.back-link {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--muted);
+    display: inline-flex;
+    font-size: .9rem;
+    font-weight: 700;
+    margin-top: 28px;
+    padding: 10px 14px;
+    text-decoration: none;
+    transition: background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    background: var(--surface-soft);
+    border-color: rgba(69, 200, 255, .45);
+    color: var(--text);
+    outline: none;
+    transform: translateX(-2px);
 }
 
 .cart-total {
@@ -740,6 +776,7 @@ h2 {
     .cta {
         border-radius: 20px;
         margin: 0 16px 50px;
+        margin-top: 42px;
     }
 }
 
