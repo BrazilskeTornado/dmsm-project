@@ -40,7 +40,7 @@ require __DIR__ . '/components/header.php';
         <p class="eyebrow">Order received</p>
         <h1>Thanks, <?= e($customer['name']) ?>.</h1>
         <p>Your order <strong>#<?= (int) $orderConfirmation['id'] ?></strong> has been saved. We’ll contact you at <?= e($customer['email']) ?> with the next steps.</p>
-        <?php if (!$orderConfirmation['mail_sent']): ?><p class="notice error">The order was saved, but the store email notification could not be sent. Check the mail server configuration.</p><?php endif; ?>
+        <?php if (mail_enabled() && !$orderConfirmation['mail_sent']): ?><p class="notice error">The order was saved, but the store email notification could not be sent. Check the SMTP configuration.</p><?php elseif (!mail_enabled()): ?><p class="notice">The order was saved. Email notifications are disabled in this local development setup.</p><?php endif; ?>
         <a class="button" href="index.php">Back to AuraPerform</a>
     </section>
 <?php elseif (!cart()): ?>

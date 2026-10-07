@@ -462,6 +462,62 @@ h2 {
     width: 100%;
 }
 
+.quantity-control {
+    align-items: center;
+    background: rgba(255, 255, 255, .045);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    display: flex;
+    margin-top: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.quantity-control input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    min-height: 44px;
+    padding: 8px 4px;
+    text-align: center;
+}
+
+.quantity-control input::-webkit-inner-spin-button,
+.quantity-control input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity-button {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: var(--blue);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.35rem;
+    height: 44px;
+    justify-content: center;
+    min-width: 44px;
+    transition: background .2s ease, color .2s ease;
+}
+
+.quantity-button:hover,
+.quantity-button:focus-visible {
+    background: rgba(69, 200, 255, .13);
+    color: var(--text);
+    outline: none;
+}
+
+.quantity-control:focus-within {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(69, 200, 255, .1);
+}
+
 .checkout-form textarea {
     min-height: 100px;
     resize: vertical;
@@ -515,6 +571,17 @@ h2 {
     margin-left: 5px;
     padding: 8px;
     width: 65px;
+}
+
+.cart-edit-list .quantity-control {
+    margin-top: 5px;
+    width: 136px;
+}
+
+.cart-edit-list .quantity-control input {
+    border: 0;
+    margin: 0;
+    width: 48px;
 }
 
 .cart-edit-list strong,

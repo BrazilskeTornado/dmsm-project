@@ -36,7 +36,13 @@ require __DIR__ . '/components/header.php';
                 <strong>€<?= number_format((float) $flavor['price'], 2) ?></strong>
                 <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
                 <input type="hidden" name="flavor_id" value="<?= (int) $flavor['id'] ?>">
-                <label>Quantity <input type="number" name="quantity" value="1" min="1" max="20"></label>
+                <label>Quantity
+                    <span class="quantity-control">
+                        <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">−</button>
+                        <input type="number" name="quantity" value="1" min="1" max="20" aria-label="Quantity of <?= e($flavor['name']) ?>">
+                        <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </span>
+                </label>
                 <button class="button" type="submit">Add to cart</button>
             </form>
         <?php endforeach; ?>

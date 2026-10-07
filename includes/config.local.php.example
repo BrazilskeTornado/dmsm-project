@@ -1,0 +1,13 @@
+<?php
+declare(strict_types=1);
+
+return [
+    'mail_enabled' => true,
+    'smtp_host' => 'smtp.example.com',
+    'smtp_port' => 587,
+    'smtp_username' => 'orders@example.com',
+    'smtp_password' => 'replace-with-real-smtp-password',
+    'smtp_encryption' => 'tls',
+    'mail_from_email' => 'orders@example.com',
+    'mail_from_name' => 'AuraPerform',
+];
