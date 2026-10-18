@@ -8,6 +8,6 @@
     </div>
     <p>&copy; <?= date('Y') ?> <?= e(APP_NAME) ?>. Built for better training.</p>
 </footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=2"></script>
 </body>
 </html>
