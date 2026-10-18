@@ -487,6 +487,66 @@ blockquote cite {
     font-size: .88rem;
 }
 
+.formula-intro {
+    margin: 20px 0 0;
+    max-width: 760px;
+}
+
+.formula-intro strong,
+.formula-notes strong {
+    color: var(--text);
+}
+
+.formula-table {
+    margin-top: 34px;
+}
+
+.formula-row {
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(180px, .75fr) minmax(110px, .35fr) 1.7fr;
+    padding: 16px 0;
+}
+
+.formula-row > :nth-child(2) {
+    color: var(--lime);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.formula-row > :last-child {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.formula-header {
+    border-bottom-color: rgba(197, 255, 74, .35);
+    color: var(--text);
+    font-size: .76rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.formula-header > :nth-child(2),
+.formula-header > :last-child {
+    color: var(--text);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.formula-notes {
+    color: var(--muted);
+    font-size: .84rem;
+    margin-top: 28px;
+    max-width: 900px;
+}
+
+.formula-notes p {
+    margin: 10px 0 0;
+}
+
 .timeline,
 .values-grid {
     display: grid;
@@ -1289,6 +1349,19 @@ details p {
 
     .ingredient-table div:nth-child(odd) {
         margin-right: 0;
+    }
+
+    .formula-row {
+        gap: 6px;
+        grid-template-columns: 1fr auto;
+    }
+
+    .formula-row > :last-child {
+        grid-column: 1 / -1;
+    }
+
+    .formula-header {
+        display: none;
     }
 
     .founder-panel {
