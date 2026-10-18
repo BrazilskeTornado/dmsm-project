@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Indexing is disabled by the noindex meta tag and X-Robots-Tag
+# emitted by components/header.php.

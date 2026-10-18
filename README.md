@@ -224,6 +224,7 @@ After changing environment variables, restart Apache/PHP and submit a test order
 
 Before production:
 
+- Remove the temporary noindex protection from `components/header.php` and review `robots.txt` before publishing this site as the canonical brand website.
 - Move database credentials to environment variables.
 - Use HTTPS.
 - Configure authenticated SMTP through PHPMailer.
